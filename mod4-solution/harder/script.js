@@ -48,8 +48,41 @@ WARNING!!! WARNING!!!
 
     var mappedNames = names.map(mapping);
 
-   console.log(mappedNames);
+  // Print out each item in mappedNames
+  for(var m = 0; m < mappedNames.length; m++)
+  {
+     console.log(mappedNames[m]);
+  }
 
+ 
+  //BONUS
+  var hello = [];
+  var goodbye = [];
+  
+  var countedNames = names.reduce(function (allNames) {
+ 
+    for(name in allNames) 
+    {
+     if (firstLetter === 'j') {
+         goodbye.push(byeSpeaker.speakSimple(name));
+      } 
+      else {
+         hello.push(helloSpeaker.speakSimple(name));
+       }
+     }
+  })
+
+  // Print out each item in mappedNames
+  for(var j = 0; j < hello.length; j++)
+  {
+     console.log(hello[j]);
+  }
+
+  // Print out each item in mappedNames
+  for(var k = 0; k < goodbye.length; k++)
+  {
+     console.log(goodbye[k]);
+  }
 
   // STEP 10:
   // Loop over the names array and say either 'Hello' or "Good Bye"
